@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace HW4
 {
@@ -39,7 +40,10 @@ namespace HW4
                     break;
                 // Canadian Postal Codes: A#B#C#
                 case 6:
-                    ux_Submit.IsEnabled = int.TryParse(UserInput.Text, out i);
+                    string pattern = @"[A-Z]\d[A-Z]\d[A-Z]\d";
+                    Match m = Regex.Match(UserInput.Text, pattern);
+
+                    ux_Submit.IsEnabled = m.Success;
                     break;
                 // US Zip Codes #####-####
                 case 10:
