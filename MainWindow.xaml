@@ -1,0 +1,17 @@
+﻿<Window x:Class="HW4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="221,97,202,140" Background="Tomato">
+            <TextBox HorizontalAlignment="Left" x:Name="UserInput" TextChanged="uxName_TextChanged" IsEnabled="True" Margin="62,79,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Height="35"/>
+            <TextBlock HorizontalAlignment="Left" Margin="63,41,0,0" Text="Enter A Valid US or Canadian Zip Code" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="244"/>
+            <Button x:Name="ux_Submit" Click="ux_Submit_Click" Content="Submit" HorizontalAlignment="Left" Margin="69,128,0,0" VerticalAlignment="Top" Height="30" Width="122"/>
+        </Grid>
+
+    </Grid>
+</Window>
